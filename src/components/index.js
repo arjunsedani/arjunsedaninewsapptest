@@ -5,6 +5,7 @@ import { CardSection } from './CardSection';
 import { FlexContainer } from './Containers';
 import NewsListView from './NewsListView';
 import { NewsListImage } from './NewsListImage';
+import { Row } from './Row';
 
 export {
   Screen,
@@ -14,5 +15,6 @@ export {
   CardSection,
   FlexContainer,
   NewsListView,
-  NewsListImage
+  NewsListImage,
+  Row
 };

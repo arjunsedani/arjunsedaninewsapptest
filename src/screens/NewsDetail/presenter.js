@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Screen, TitleText, NewsListImage } from '../../components';
+import { Screen, TitleText, NewsListImage, BodyText, Spacing, Row } from '../../components';
 
 type Props = {
   newsActions: {
@@ -15,12 +15,24 @@ export default class NewsDetail extends PureComponent<Props, State> {
     const news = navigation.getParam('newsDetail');
     return (
       <Screen justifyContent="center">
-        <TitleText>{news.description}</TitleText>
-        <NewsListImage
-          source={{
-            uri: news.urlToImage
-          }}
-        />
+        <Spacing hSpacing={20}>
+          <Spacing vSpacing={10} />
+          <TitleText>{news.title}</TitleText>
+          <Spacing vSpacing={10} />
+          <Row>
+            <BodyText>{news.author}</BodyText>
+            <Spacing hSpacing={10} />
+            <BodyText>{news.publishedAt.toString().slice(0, 10)}</BodyText>
+          </Row>
+          <Spacing vSpacing={10} />
+          <NewsListImage
+            source={{
+              uri: news.urlToImage
+            }}
+          />
+          <Spacing vSpacing={10} />
+          <BodyText>{news.content}</BodyText>
+        </Spacing>
       </Screen>
     );
   }

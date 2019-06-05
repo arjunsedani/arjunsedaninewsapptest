@@ -1,3 +1,3 @@
-import NewsList from './presenter';
+import NewsDetail from './presenter';
 
-export default NewsList;
+export default NewsDetail;

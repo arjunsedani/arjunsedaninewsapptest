@@ -9,8 +9,9 @@ import glamorous from 'glamorous-native';
 import { palette } from '../../theme/common';
 
 export const TitleText = glamorous.text({
-  fontSize: 20, // TODO: Font size update when it becomes available on zeplin
-  textAlign: 'center'
+  fontSize: 15,
+  fontWeight: '900',
+  textAlign: 'left'
 });
 
 export const BodyText = glamorous.text({

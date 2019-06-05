@@ -6,10 +6,11 @@
  */
 
 import React, { PureComponent } from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { CardSection } from '../CardSection';
 import { FlexContainer } from '../Containers';
 import { NewsListImage } from '../NewsListImage';
+import { TitleText, BodyText } from '../Text';
 
 type Props = {
   data: {
@@ -30,14 +31,17 @@ export default class NewsListView extends PureComponent<Props, State> {
             alignItems="center"
             flex={1}
           >
-            <FlexContainer flex={1} marginLeft={15}>
-              <Text>{data.title}</Text>
+            <FlexContainer flex={1}>
+              <TitleText>{data.title}</TitleText>
             </FlexContainer>
             <NewsListImage
               source={{
                 uri: data.urlToImage
               }}
             />
+          </FlexContainer>
+          <FlexContainer flex={1}>
+            <BodyText>{data.author}</BodyText>
           </FlexContainer>
         </TouchableOpacity>
       </CardSection>
