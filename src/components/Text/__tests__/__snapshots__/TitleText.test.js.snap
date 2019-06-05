@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body Text renders component to snapshot 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "color": "#002124",
+        "fontSize": 14,
+        "textAlign": "left",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Title Text renders component to snapshot 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "fontSize": 20,
+        "textAlign": "center",
+      },
+    ]
+  }
+/>
+`;
